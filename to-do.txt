@@ -1,0 +1,10 @@
+Make the top of right fixed so it doesnt move with the page.
+
+"/" page
+Welcome to my website
+
+About me
+	experience
+	interests
+
+some funny stuff

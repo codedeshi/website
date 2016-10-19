@@ -1,0 +1,58 @@
+<html ng-app='myApp'>
+	<head>
+		<title></title>
+		<script src='/angular/angular.js'></script>
+		<script src='angular-route/angular-route.js'></script>
+		<script src='angular-cookies/angular-cookies.js'></script>
+		<script src="assets/routes.js" charset="utf-8"></script>
+		<script src="assets/controllers/mainController.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="static/css/style.css">
+	<script>
+	</script>
+	</head>
+	<body ng-controller="mainController as mc" >
+		<div id="backGround"  ></div>
+		<div id="container" ng-class="mc.getBackgroundClass()" >
+			
+			<div id="left">
+				<!--<p id="mainImage"><img id="profileImange"	 src="static/img/DSC_0133.jpg" alt="static/img/DSC_0133.jpg"></p>-->
+				<div id="opacity"></div>
+				<ul id="nav" class="list">
+					<li id="cv" ng-class="mc.getLiClass('/cv')">
+						<img ng-class="mc.getClass('/cv')" class="cv">
+						<a href="#/cv">Curriculum Vitae</a>
+					</li>
+					<li id="portfolio">
+						<img ng-class="mc.getPortfolioClass()" class="portfolio"> 
+						<span> Portfolio</span>
+						<ul class="list" >
+							<li id="python" ng-class="mc.getLiClass('/python')">
+								<img ng-class="mc.getClass('/python')" class="python">
+								<a href="#/python">Python</a>
+							</li>
+							
+							<li id="mean" ng-class="mc.getLiClass('/mean')">
+								<img ng-class="mc.getClass('/mean')" class="mean">
+								<a href="#/mean">Mean</a>	
+							</li>
+							
+							<li id="ruby" ng-class="mc.getLiClass('/ruby')">
+								<img ng-class="mc.getClass('/ruby')" class="ruby">
+								<a href="#/ruby">Ruby</a></li>
+						</ul>
+					</li>
+				<li id="contact" ng-class="mc.getLiClass('/contact')">
+					<img ng-class="mc.getClass('/contact')" class="contact">
+					<a href="#/contact">Contact info</a>
+					</li>
+				</ul> 
+			</div>
+			<!--<div id="top">
+						<h1>Curriculum Vitae</h1>
+			</div>-->
+			<div id="right">
+				<div ng-view=''></div>
+			</div>
+		</div>
+	</body>
+</html>
